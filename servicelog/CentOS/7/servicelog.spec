@@ -4,7 +4,7 @@
 
 Name:           servicelog
 Version:        1.1.14
-Release:        6%{?extraver}%{gitcommittag}%{?dist}
+Release:        7%{?extraver}%{gitcommittag}%{?dist}
 Summary:        Servicelog Tools
 
 Group:          System Environment/Base
@@ -56,6 +56,10 @@ of service operations that have been performed on the system.
 %{_mandir}/man[18]/*.[18]*
 
 %changelog
+* Fri Aug 25 2017 OpenPOWER Host OS Builds Bot <open-power-host-os-builds-bot@users.noreply.github.com> - 1.1.14-7.git
+- Updating to 3955e85 servicelog : Removes the unused -v option in
+  log_repair_action.c
+
 * Mon Aug 14 2017 Olav Philipp Henschel <olavph@linux.vnet.ibm.com> - 1.1.14-6.git
 - Bump release
 
