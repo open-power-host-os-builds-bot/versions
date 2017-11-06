@@ -8,8 +8,8 @@
 
 Name:       hwdata
 Summary:    Hardware identification and configuration data
-Version:    0.288
-Release:    3%{?extraver}%{gitcommittag}%{?dist}
+Version:    0.306
+Release:    1%{?extraver}%{gitcommittag}%{?dist}
 License:    GPLv2+
 Group:      System Environment/Base
 Source0:    %{name}.tar.gz
@@ -56,6 +56,10 @@ udevadm hwdb --update >/dev/null 2>&1 || :
 %{_datadir}/%{name}/*
 
 %changelog
+* Mon Nov 06 2017 OpenPOWER Host OS Builds Bot <ophostos@br.ibm.com> - 0.306-1.git
+- Version update
+- Updating to 9d3f7e1 - Updated pci, usb and vendor ids.
+
 * Mon Aug 14 2017 Olav Philipp Henschel <olavph@linux.vnet.ibm.com> - 0.288-3.git
 - Bump release
 

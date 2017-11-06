@@ -5,7 +5,7 @@
 
 Name: open-power-host-os
 Version: 3.5
-Release: 4%{?milestone_tag}%{dist}
+Release: 5%{?milestone_tag}%{dist}
 Summary: OpenPOWER Host OS metapackages
 Group: System Environment/Base
 License: GPLv3
@@ -62,7 +62,7 @@ Requires(post): libvirt = 3.6.0-3%{?extraver}.gitdd9401b%{dist}
 Requires(post): qemu = 15:2.10.0-3%{?extraver}.gitbf0fd83%{dist}
 Requires: %{name}-ras = %{version}-%{release}
 Requires(post): crash
-Requires(post): hwdata = 0.288-3%{?extraver}.git625a119%{dist}
+Requires(post): hwdata = 0.306-1%{?extraver}.git9d3f7e1%{dist}
 Requires(post): libnl3 = 3.2.28-6%{?extraver}%{dist}
 Requires(post): libservicelog = 1.1.18-3%{?extraver}.git1e39e77%{dist}
 Requires(post): libvpd = 2.2.5-8%{?extraver}.git7d959c5%{dist}
@@ -134,7 +134,7 @@ Requires: %{name}-base = %{version}-%{release}
 Requires(post): kernel = 4.14.0-1.rc4%{?extraver}.gitb27fc5c%{dist}
 
 Requires(post): crash
-Requires(post): hwdata = 0.288-3%{?extraver}.git625a119%{dist}
+Requires(post): hwdata = 0.306-1%{?extraver}.git9d3f7e1%{dist}
 Requires(post): libnl3 = 3.2.28-6%{?extraver}%{dist}
 Requires(post): libservicelog = 1.1.18-3%{?extraver}.git1e39e77%{dist}
 Requires(post): libvpd = 2.2.5-8%{?extraver}.git7d959c5%{dist}
@@ -210,6 +210,9 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Mon Nov 06 2017 OpenPOWER Host OS Builds Bot <ophostos@br.ibm.com> - 3.5-5.dev
+- Update package dependencies
+
 * Tue Oct 31 2017 Murilo Opsfelder Araujo <muriloo@linux.vnet.ibm.com> - 3.5-4.dev
 - Update deps to systemtap 3.2
 
