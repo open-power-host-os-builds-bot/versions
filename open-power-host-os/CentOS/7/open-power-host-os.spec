@@ -5,7 +5,7 @@
 
 Name: open-power-host-os
 Version: 3.5
-Release: 26%{?milestone_tag}%{dist}
+Release: 27%{?milestone_tag}%{dist}
 Summary: OpenPOWER Host OS metapackages
 Group: System Environment/Base
 License: GPLv3
@@ -50,7 +50,7 @@ BuildRequires: policycoreutils-python
 Summary: OpenPOWER Host OS full package set
 
 Requires: %{name}-base = %{version}-%{release}
-Requires(post): kernel = 4.16.0-1.rc7%{?extraver}.git58079f0%{dist}
+Requires(post): kernel = 4.16.0-2%{?extraver}.gitb24758c%{dist}
 Requires: %{name}-container = %{version}-%{release}
 Requires(post): docker
 Requires(post): docker-swarm = 1.1.0-3%{?extraver}.gita0fd82b
@@ -58,8 +58,8 @@ Requires(post): flannel
 Requires(post): kubernetes = 1.2.0-0.23%{?extraver}.git4a3f9c5%{dist}
 Requires: %{name}-virt = %{version}-%{release}
 Requires(post): SLOF = 20171214-1%{?extraver}.git8128b8e%{dist}
-Requires(post): libvirt = 4.0.0-2%{?extraver}.git5e6f8a1%{dist}
-Requires(post): qemu = 15:2.11.50-3%{?extraver}.git59cc362%{dist}
+Requires(post): libvirt = 4.2.0-1%{?extraver}.gitbf217de%{dist}
+Requires(post): qemu = 15:2.11.91-1%{?extraver}.git46a0689%{dist}
 Requires: %{name}-ras = %{version}-%{release}
 Requires(post): crash
 Requires(post): hwdata = 0.288-3%{?extraver}.git625a119%{dist}
@@ -88,7 +88,7 @@ Summary: OpenPOWER Host OS basic packages
 
 Requires: %{name}-release = %{version}-%{release}
 
-Requires(post): kernel = 4.16.0-1.rc7%{?extraver}.git58079f0%{dist}
+Requires(post): kernel = 4.16.0-2%{?extraver}.gitb24758c%{dist}
 
 Obsoletes: open-power-host-os-virt-management < 3.0-7
 
@@ -101,7 +101,7 @@ Obsoletes: open-power-host-os-virt-management < 3.0-7
 Summary: OpenPOWER Host OS container packages
 
 Requires: %{name}-base = %{version}-%{release}
-Requires(post): kernel = 4.16.0-1.rc7%{?extraver}.git58079f0%{dist}
+Requires(post): kernel = 4.16.0-2%{?extraver}.gitb24758c%{dist}
 
 Requires(post): docker
 Requires(post): docker-swarm = 1.1.0-3%{?extraver}.gita0fd82b
@@ -117,11 +117,11 @@ Requires(post): kubernetes = 1.2.0-0.23%{?extraver}.git4a3f9c5%{dist}
 Summary: OpenPOWER Host OS hypervisor packages
 
 Requires: %{name}-base = %{version}-%{release}
-Requires(post): kernel = 4.16.0-1.rc7%{?extraver}.git58079f0%{dist}
+Requires(post): kernel = 4.16.0-2%{?extraver}.gitb24758c%{dist}
 
 Requires(post): SLOF = 20171214-1%{?extraver}.git8128b8e%{dist}
-Requires(post): libvirt = 4.0.0-2%{?extraver}.git5e6f8a1%{dist}
-Requires(post): qemu = 15:2.11.50-3%{?extraver}.git59cc362%{dist}
+Requires(post): libvirt = 4.2.0-1%{?extraver}.gitbf217de%{dist}
+Requires(post): qemu = 15:2.11.91-1%{?extraver}.git46a0689%{dist}
 
 %description virt
 %{summary}
@@ -132,7 +132,7 @@ Requires(post): qemu = 15:2.11.50-3%{?extraver}.git59cc362%{dist}
 Summary: OpenPOWER Host OS RAS (Reliability Availability Serviceability) packages
 
 Requires: %{name}-base = %{version}-%{release}
-Requires(post): kernel = 4.16.0-1.rc7%{?extraver}.git58079f0%{dist}
+Requires(post): kernel = 4.16.0-2%{?extraver}.gitb24758c%{dist}
 
 Requires(post): crash
 Requires(post): hwdata = 0.288-3%{?extraver}.git625a119%{dist}
@@ -213,6 +213,9 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Tue Apr 03 2018 OpenPOWER Host OS Builds Bot <open-power-host-os-builds-bot@users.noreply.github.com> - 3.5-27.dev
+- Update package dependencies
+
 * Thu Mar 29 2018 OpenPOWER Host OS Builds Bot <open-power-host-os-builds-bot@users.noreply.github.com> - 3.5-26.dev
 - Update package dependencies
 
