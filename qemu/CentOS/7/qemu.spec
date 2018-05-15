@@ -189,8 +189,8 @@
 
 Summary: QEMU is a FAST! processor emulator
 Name: qemu
-Version: 2.11.0
-Release: 2%{?extraver}%{gitcommittag}%{?dist}
+Version: 2.11.91
+Release: 1%{?extraver}%{gitcommittag}%{?dist}
 Epoch: 15
 License: GPLv2+ and LGPLv2+ and BSD
 Group: Development/Tools
@@ -1558,6 +1558,10 @@ getent passwd qemu >/dev/null || \
 %endif
 
 %changelog
+* Tue May 15 2018 OpenPOWER Host OS Builds Bot <open-power-host-os-builds-bot@users.noreply.github.com> - 15:2.11.91-1.git
+- Version update
+- Updating to 46a0689 Merge tag v2.12.0-rc1 into hostos-devel
+
 * Mon Mar 05 2018 Fabiano Rosas <farosas@linux.vnet.ibm.com> - 15:2.11.0-2.git
 - Avoid conflict with opal-firmware package
 
