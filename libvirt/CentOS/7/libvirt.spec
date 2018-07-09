@@ -261,7 +261,7 @@
 
 Summary: Library providing a simple virtualization API
 Name: libvirt
-Version: 4.3.0
+Version: 4.5.0
 Release: 1%{?extraver}%{gitcommittag}%{?dist}
 License: LGPLv2+
 Group: Development/Libraries
@@ -2204,6 +2204,10 @@ exit 0
 
 
 %changelog
+* Mon Jul 09 2018 OpenPOWER Host OS Builds Bot <open-power-host-os-builds-bot@users.noreply.github.com> - 4.5.0-1.git
+- Version update
+- Updating to b7c8ea8 Merge tag v4.5.0 into hostos-devel
+
 * Tue May 15 2018 OpenPOWER Host OS Builds Bot <open-power-host-os-builds-bot@users.noreply.github.com> - 4.3.0-1.git
 - Version update
 - Updating to 3096ff1 Merge tag v4.3.0 into hostos-devel
